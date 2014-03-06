@@ -1,0 +1,90 @@
+/* Generic pane rules */
+body { 
+	margin: 0; background-color:#CCCCCC; 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.row,.row2, .col { overflow: hidden; position: absolute; }
+.row { left: 0; right: 0; }
+.col { top: 0; bottom: 0; }
+.scroll-x { overflow-x: auto; }
+.scroll-y { overflow-y: auto; }
+
+.menubar{ background-color:#b0c4de;}
+.header { padding:0px 0px; background-image:url("#{resource['images:header/banner_bg.gif']}"); background-repeat:repeat-x-y; }
+.footer { background-color:rgb(245,245,245); }
+
+.header.row { height: 80px; top: 0; }
+.menubar.row { top: 80px; bottom: 30px;}
+.body.row { top: 115px; bottom: 30px; height: 600px}
+.container { height: 100%; }
+.footer {
+ clear: both;
+ position: relative;
+ z-index: 10;
+ height: 3em;
+ margin-top: -3em;
+}
+
+.content { padding-bottom: 3em; }
+.contentWrapper.row { top: 0px; bottom: 0px; }
+
+.rightHeaderImages { padding:0px 10px; }
+.rightHeaderImages.col { top: 0px; right: 0; }
+.rightFooterImages { padding:5px 10px; }
+.rightFooterImages.col { top: 0px; right: 0; }
+.leftFooterImages { padding:5px 10px; }
+.leftFooterImages.col { top: 0px; left: 0; }
+.rightTopMenu { padding:0px 5px; }
+.rightTopMenu.col { top: 50px; right: 0; }
+.leftMenu{ padding:0px; width: 100%; }
+.footerContent{ vertical-align: middle; padding:10px;}
+
+.inputboxSearch {
+	/*TODO check search.png with rozaidi*/
+	background:url("#{resource['images:search.png']}") no-repeat 2% !important;	
+	padding-left:20px !important;
+}
+
+.subject{
+    font-weight: bold;
+}
+
+.megaMenuStyle{
+	direction:rtl; overflow-y: auto; overflow-x:hidden; height: 400px;
+}
+
+.clearGrid tr,.clearGrid td{
+    border-style: hidden !important;
+}
+
+.comRegGrid tr,.comRegGrid td{
+    border-style: hidden !important;
+    background-color:#CCCCCC !important;
+}
+
+.comReg{
+    background-color:#CCCCCC !important;
+}
+
+.tblstyle td {
+    vertical-align: top;
+}
+.regtblstyle td {
+	width: 10%;
+}
+.edittbl table {
+	border-color: transparent;
+}
+
+/*Datatable style*/
+.ui-datatable .ui-datatable-header,
+.ui-datatable .ui-datatable-footer {
+	text-align:right !important;
+	padding:4px 10px !important;
+}
+
+.ui-datatable .ui-datatable-odd {
+	background-color:#E5E8E9; 
+}
