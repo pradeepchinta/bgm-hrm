@@ -21,8 +21,8 @@
 		      from users where username=?" 
  
 		   authorities-by-username-query="
-		      select u.username, ur.authority from users u, user_roles ur 
-		      where u.user_id = ur.user_id and u.username =?  " 
+		      select u.username, ur.authority from users u, userroles ur 
+		      where u.id = ur.userid and u.username =?  " 
  
 		/>
 	   </authentication-provider>
