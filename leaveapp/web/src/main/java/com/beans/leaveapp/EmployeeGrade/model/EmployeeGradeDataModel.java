@@ -1,4 +1,4 @@
-package com.beans.leaveapp.EmployeeGrade.model;
+package com.beans.leaveapp.employeegrade.model;
 
 import java.util.List;
 
@@ -13,10 +13,12 @@ public class EmployeeGradeDataModel extends ListDataModel<EmployeeGrade> impleme
 
 	
 	public EmployeeGradeDataModel(){
+		
 	}
 	
 	public EmployeeGradeDataModel(List<EmployeeGrade> data){
 		super(data);
+		
 	}
 	
 	@Override
@@ -28,7 +30,10 @@ public class EmployeeGradeDataModel extends ListDataModel<EmployeeGrade> impleme
 	                return employeeGrade;
 	            }
 	        }
+	        
 	        return null;
+
+		
 	}
 
 	@Override

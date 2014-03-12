@@ -1,4 +1,4 @@
-package com.beans.leaveapp.EmployeeGrade.bean;
+package com.beans.leaveapp.employeegrade.bean;
 
 import java.io.Serializable;
 import java.util.List;
@@ -9,12 +9,11 @@ import javax.faces.context.FacesContext;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.SelectEvent;
 
-import com.beans.leaveapp.EmployeeGrade.model.EmployeeGradeDataModel;
 import com.beans.leaveapp.employeegrade.model.EmployeeGrade;
+import com.beans.leaveapp.employeegrade.model.EmployeeGradeDataModel;
 import com.beans.leaveapp.employeegrade.repository.EmployeeGradeRepository;
 import com.beans.leaveapp.employeegrade.service.EmployeeGradeNotFound;
 import com.beans.leaveapp.employeegrade.service.EmployeeGradeService;
-import com.beans.leaveapp.employeegrade.service.EmployeeGradeServiceImpl;
 import com.beans.leaveapp.leavetype.model.LeaveType;
 import com.beans.leaveapp.leavetype.model.LeaveTypeDataModel;
 import com.beans.leaveapp.leavetype.service.LeaveTypeNotFound;
@@ -28,7 +27,7 @@ public class EmployeeGradeManagementBean implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	// EmployeeGradeRepository employeeGradeRepository;
-	private EmployeeGradeService employeeGradeService ;
+	EmployeeGradeService employeeGradeService;
 	private List<EmployeeGrade> employeeGradeList;
 	private EmployeeGradeDataModel employeeGradeDataModel;
 	private EmployeeGrade newEmployeeGrade = new EmployeeGrade();
@@ -101,6 +100,7 @@ public class EmployeeGradeManagementBean implements Serializable{
 	}
 
 	public void doCreateEmployeeGrade() throws EmployeeGradeNotFound {
+		newEmployeeGrade.setDeleted(false);
 		getEmployeeGradeService().create(newEmployeeGrade);
 		setInsertDelete(true);
 	}
@@ -128,8 +128,8 @@ public class EmployeeGradeManagementBean implements Serializable{
 	
 	public void doDeleteEmployeeGrade() {
 		try {
-			getEmployeeGradeService().deleted(selectedEmployeeGrade.getId());
-		} catch(Exception e) {
+			getEmployeeGradeService().delete(selectedEmployeeGrade.getId());
+		} catch(EmployeeGradeNotFound e) {
 			FacesMessage msg = new FacesMessage("Error", "Leave Type With id: " + selectedEmployeeGrade.getId() + " not found!");  
 			  
 	        FacesContext.getCurrentInstance().addMessage(null, msg);  

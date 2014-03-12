@@ -45,9 +45,4 @@
 	 <bean id="departmentService" class="com.beans.leaveapp.department.service.DepartmentServiceImpl" >
 	 </bean>    
 	
-	 <bean id="systemAuditTrail" class="com.beans.common.audit.model.SystemAuditTrail"/>
-	 
-	 <bean id="systemAuditTrailService" class="com.beans.common.audit.service.SystemAuditTrailRecordServiceImpl">
-	 </bean>
-	 
 </beans>

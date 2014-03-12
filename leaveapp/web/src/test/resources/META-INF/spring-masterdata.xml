@@ -37,11 +37,6 @@
 	
 	 <bean id="employeeGradeService" class="com.beans.leaveapp.employeeGrade.service.EmployeeGradeServiceImpl" >
 	 </bean>  
-	 
-	 <bean id="systemAuditTrail" class="com.beans.common.audit.model.SystemAuditTrail"/>
-	 
-	 <bean id="systemAuditTrailService" class="com.beans.common.audit.service.SystemAuditTrailRecordServiceImpl">
-	 </bean>
 	
 	
 </beans>

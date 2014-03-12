@@ -3,7 +3,6 @@
 
     <!--Persistence Unit for Mysql database-->
     <persistence-unit name="masterDataMysql" transaction-type="RESOURCE_LOCAL">
-    
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>com.beans.leaveapp.leavetype.model.LeaveType</class>
         <class>com.beans.leaveapp.employeegrade.model.EmployeeGrade</class>
@@ -12,8 +11,6 @@
         <class>com.beans.leaveapp.address.model.Address</class>
         <class>com.beans.leaveapp.employee.model.Employee</class>
         <class>com.beans.common.security.users.model.Users</class>
-        <class>com.beans.common.audit.model.SystemAuditTrail</class>
-        
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
