@@ -1,4 +1,4 @@
-package com.beans.leaveapp.employeeGrade.model;
+package com.beans.leaveapp.employeegrade.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Type;
 
 @Entity
-@Table(name="employeegrade")
+@Table(name="EmployeeGrade")
 public class EmployeeGrade {
 	 private int id;
 	 private String name;
